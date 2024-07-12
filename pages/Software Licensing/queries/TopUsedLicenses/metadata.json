@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT a.license_id, u.user_email, a.activation_count\nFROM (\n  SELECT license_id, COUNT(site_id) AS activation_count\n  FROM wp_edd_license_activations\n  WHERE activated = 1\n\tAND is_local = 0\n  GROUP BY license_id\n  ORDER BY activation_count DESC\n  LIMIT 20\n) a\nJOIN wp_edd_licenses l ON a.license_id = l.id\nJOIN wp_users u ON l.user_id = u.ID\nORDER BY a.activation_count DESC;",
+      "body": "SELECT a.license_id, u.user_email, a.activation_count\nFROM (\n  SELECT license_id, SUM(CASE WHEN is_local = 1 THEN 1 ELSE 0 END) AS local_count, COUNT(site_id) AS activation_count\n  FROM wp_edd_license_activations\n\tWHERE activated = 1\n\tAND is_local = 0\n  GROUP BY license_id\n  ORDER BY activation_count DESC\n  LIMIT 20\n) a\nJOIN wp_edd_licenses l ON a.license_id = l.id\nJOIN wp_users u ON l.user_id = u.ID\nORDER BY (a.activation_count) DESC;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

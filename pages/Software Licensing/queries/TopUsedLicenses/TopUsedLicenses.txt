@@ -1,8 +1,8 @@
 SELECT a.license_id, u.user_email, a.activation_count
 FROM (
-  SELECT license_id, COUNT(site_id) AS activation_count
+  SELECT license_id, SUM(CASE WHEN is_local = 1 THEN 1 ELSE 0 END) AS local_count, COUNT(site_id) AS activation_count
   FROM wp_edd_license_activations
-  WHERE activated = 1
+	WHERE activated = 1
 	AND is_local = 0
   GROUP BY license_id
   ORDER BY activation_count DESC
@@ -10,4 +10,4 @@ FROM (
 ) a
 JOIN wp_edd_licenses l ON a.license_id = l.id
 JOIN wp_users u ON l.user_id = u.ID
-ORDER BY a.activation_count DESC;
+ORDER BY (a.activation_count) DESC;

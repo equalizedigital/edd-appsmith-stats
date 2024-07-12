@@ -130,7 +130,7 @@
       }
     ]
   },
-  "customFusionChartConfig": "{\n  \"type\": \"bar2d\",\n  \"dataSource\": {\n    \"data\": {{TopUsedLicenses.data.map((row) => {\n      return { label: row.license_id + '', value: row.activation_count, 'color': Color.getRandomColor( '#E55B10' ) };\n  \t\t});\n\t\t}},\n    \"chart\": {\n      \"caption\": \"Top 20 License IDs by Number of Activations\",\n      \"xAxisName\": \"License ID\",\n      \"yAxisName\": \"# Activations\",\n      \"theme\": \"fusion\",\n\t\t\t\"showValues\": \"1\"\n    }\n  }\n}",
+  "customFusionChartConfig": "{\n  \"type\": \"bar2d\",\n  \"dataSource\": {\n    \"data\": {{TopUsedLicenses.data.map((row) => {\n      return { label: row.user_email + '', value: row.activation_count, 'color': Color.getRandomColor( '#E55B10' ) };\n  \t\t});\n\t\t}},\n    \"chart\": {\n      \"caption\": \"Top 20 License IDs by Number of Activations\",\n      \"xAxisName\": \"License ID\",\n      \"yAxisName\": \"# Activations\",\n      \"theme\": \"fusion\",\n\t\t\t\"showValues\": \"1\"\n    }\n  }\n}",
   "displayName": "Chart",
   "dynamicBindingPathList": [
     {
