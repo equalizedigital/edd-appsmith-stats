@@ -117,7 +117,7 @@
       }
     ]
   },
-  "customFusionChartConfig": "{\n  \"type\": \"pie2d\",\n  \"dataSource\": {\n    \"data\": {{ OrderItemsbyIDandPriceID.data.map((row) => {\n      return { label: row.product_name, value: row.count, 'color': Color.getRandomColor( '#7a3784' ) };\n  \t\t});\n\t\t}},\n    \"chart\": {\n      \"caption\": \"Product Sales by Volume\",\n      \"theme\": \"fusion\",\n\t\t\t\"labelFontSize\": \"10px\",\n\t\t\t\"showLegend\": \"0\",\n\t\t\t\"startingAngle\": 0,\n\t\t\t\"yAxisMinValue\": \"0.2\",\n\t\t\t\"showValues\": \"0\",\n\t\t\t\"labelDisplay\": \"Auto\",\n      \"useEllipsesWhenOverflow\": \"0\"\n\t\t}\n  }\n}",
+  "customFusionChartConfig": "{\n  \"type\": \"pie2d\",\n  \"dataSource\": {\n    \"data\": {{ OrderItemsbyIDandPriceID.data.map((row) => {\n      return { label: row.product_name, value: row.count, 'color': Color.getRandomColor( '#7a3784' ) };\n  \t\t});\n\t\t}},\n    \"chart\": {\n      \"caption\": \"Product Sales by Volume (last year)\",\n      \"theme\": \"fusion\",\n\t\t\t\"labelFontSize\": \"10px\",\n\t\t\t\"showLegend\": \"0\",\n\t\t\t\"startingAngle\": 0,\n\t\t\t\"yAxisMinValue\": \"0.2\",\n\t\t\t\"showValues\": \"0\",\n\t\t\t\"labelDisplay\": \"Auto\",\n      \"useEllipsesWhenOverflow\": \"0\"\n\t\t}\n  }\n}",
   "displayName": "Chart",
   "dynamicBindingPathList": [
     {

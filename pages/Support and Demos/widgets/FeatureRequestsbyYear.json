@@ -70,7 +70,7 @@
   "version": 1,
   "widgetId": "js3s3q25f2",
   "widgetName": "FeatureRequestsbyYear",
-  "widthInPercentage": 0.49721254355400696,
+  "widthInPercentage": "0.49721254355400696",
   "xAxisName": "Product Line",
   "yAxisName": "Revenue($)"
 }

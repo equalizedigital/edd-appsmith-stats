@@ -3,6 +3,7 @@ FROM (
   SELECT license_id, COUNT(site_id) AS activation_count
   FROM wp_edd_license_activations
   WHERE activated = 1
+	AND is_local = 0
   GROUP BY license_id
   ORDER BY activation_count DESC
   LIMIT 20
