@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT IF(RANK <= 10, version, 'Other') AS version_group,\n       SUM(site_count) * 100.0 / total_count AS percentage\nFROM (\n\tSELECT version, COUNT(id) AS site_count,\n\tROW_NUMBER() OVER (ORDER BY COUNT(id) DESC) AS RANK\n\tFROM wp_edd_all_sites\n\tWHERE check_date >= DATE_SUB(NOW(), INTERVAL 1 MONTH)\n\tGROUP BY version\n) grouped_versions\nCROSS JOIN (SELECT COUNT(id) AS total_count FROM wp_edd_all_sites\n\t\t\t\t\t\tWHERE check_date >= DATE_SUB(NOW(), INTERVAL 1 MONTH)) t\nGROUP BY version_group\nORDER BY percentage DESC;\n",
+      "body": "SELECT IF(version_rank <= 20, version, 'Other') AS version_group,\n       ROUND(SUM(site_count) * 100.0 / total_count, 2) AS percentage\nFROM (\n  SELECT version,\n         COUNT(id) AS site_count,\n         ROW_NUMBER() OVER (ORDER BY COUNT(id) DESC) AS version_rank\n  FROM wp_edd_all_sites\n  WHERE check_date >= DATE_SUB(NOW(), INTERVAL 1 MONTH)\n    AND version != ''\n  GROUP BY version\n) AS grouped_versions\nCROSS JOIN (\n  SELECT COUNT(id) AS total_count\n  FROM wp_edd_all_sites\n  WHERE check_date >= DATE_SUB(NOW(), INTERVAL 1 MONTH)\n    AND version != ''\n) AS total\nGROUP BY version_group\nORDER BY percentage DESC;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
