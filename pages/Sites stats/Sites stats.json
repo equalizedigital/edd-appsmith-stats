@@ -6,7 +6,7 @@
       {
         "dsl": {
           "backgroundColor": "none",
-          "bottomRow": 6691.59375,
+          "bottomRow": 7153.59375,
           "canExtend": true,
           "containerStyle": "none",
           "detachFromLayout": true,
@@ -45,6 +45,14 @@
                 {
                   "align": "start",
                   "id": "186b4i2agb"
+                }
+              ]
+            },
+            {
+              "children": [
+                {
+                  "align": "start",
+                  "id": "xf137lk5ex"
                 }
               ]
             },
@@ -131,7 +139,7 @@
           ],
           "leftColumn": 0,
           "minHeight": 4980,
-          "mobileBottomRow": 7683.593749999998,
+          "mobileBottomRow": 8141.593749999996,
           "mobileTopRow": 0,
           "parentColumnSpace": 1,
           "parentRowSpace": 1,
