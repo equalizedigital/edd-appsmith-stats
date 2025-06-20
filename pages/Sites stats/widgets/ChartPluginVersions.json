@@ -1,6 +1,6 @@
 {
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-  "alignment": "center",
+  "alignment": "start",
   "allowScroll": false,
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
@@ -47,7 +47,7 @@
   "isVisible": true,
   "key": "gp5sr0liiy",
   "labelOrientation": "auto",
-  "leftColumn": 32,
+  "leftColumn": 0,
   "minWidth": 450,
   "mobileBottomRow": 109.759375,
   "mobileLeftColumn": 0,
@@ -60,7 +60,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 64,
+  "rightColumn": 32,
   "searchTags": [
     "graph",
     "visuals",

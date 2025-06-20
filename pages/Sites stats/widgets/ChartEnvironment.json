@@ -4,7 +4,7 @@
   "allowScroll": false,
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 378.159375,
+  "bottomRow": 106.15937500000001,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "chartData": {
     "n3fuot1hwl": {
@@ -117,7 +117,7 @@
       }
     ]
   },
-  "customFusionChartConfig": "{\n  \"type\": \"pie2d\",\n  \"dataSource\": {\n    \"data\": {{ Object.keys(TopPluginsLMS.data[0]).map(key => ({\n      label: key,\n      value: TopPluginsLMS.data[0][key],\n\t\t\tcolor: Color.getRandomColor( '#76a75b' )\n    }));\n\t\t}},\n    \"chart\": {\n      \"caption\": \"Plugin Popularity - LMS\",\n\t\t\t\"labelFontSize\": \"14px\",\n\t\t\t\"showLegend\": \"0\",\n\t\t\t\"startingAngle\": 15,\n\t\t\t\"yAxisMinValue\": \"0.2\",\n\t\t\t\"theme\": \"fusion\",\n\t\t\t\"paletteColors\": \"#17a2b8\",\n\t\t\t\"baseFont\": \"Roboto, sans-serif\",\n\t\t\t\"baseFontSize\": \"14\",\n\t\t\t\"baseFontColor\": \"#4d4d4d\",\n\t\t\t\"captionFont\": \"Roboto, sans-serif\",\n\t\t\t\"captionFontSize\": \"24\",\n\t\t\t\"subCaptionFont\": \"Roboto, sans-serif\",\n\t\t\t\"subCaptionFontSize\": \"18\",\n\t\t\t\"subCaptionFontColor\": \"#868e96\"\n\t\t}\n  }\n}",
+  "customFusionChartConfig": "{\n  \"type\": \"pie2d\",\n  \"dataSource\": {\n    \"data\": {{EnvironmentPercent.data.map((row) => {\n      return { label: row.environment, value: row.percentage, 'color': Color.getRandomColor('#E55B10') };\n    })}},\n    \"chart\": {\n      \"caption\": \"Environments Last 30 Days\",\n      \"labelFontSize\": \"14px\",\n      \"showLegend\": \"0\",\n      \"startingAngle\": 15,\n      \"yAxisMinValue\": \"0.2\",\n      \"showValues\": 0,\n      \"theme\": \"fusion\",\n      \"paletteColors\": \"#17a2b8\",\n      \"baseFont\": \"Roboto, sans-serif\",\n      \"baseFontSize\": \"14\",\n      \"baseFontColor\": \"#4d4d4d\",\n      \"captionFont\": \"Roboto, sans-serif\",\n      \"captionFontSize\": \"24\",\n      \"subCaptionFont\": \"Roboto, sans-serif\",\n      \"subCaptionFontSize\": \"18\",\n      \"subCaptionFontColor\": \"#868e96\"\n    }\n  }\n}",
   "displayName": "Chart",
   "dynamicBindingPathList": [
     {
@@ -149,14 +149,14 @@
   "isVisible": true,
   "key": "gp5sr0liiy",
   "labelOrientation": "auto",
-  "leftColumn": 0,
+  "leftColumn": 32,
   "minWidth": 450,
-  "mobileBottomRow": 471.3593750000001,
+  "mobileBottomRow": 851.9593749999996,
   "mobileLeftColumn": 0,
   "mobileRightColumn": 64,
-  "mobileTopRow": 417.3593750000001,
-  "originalBottomRow": 297,
-  "originalTopRow": 243,
+  "mobileTopRow": 806.9593749999996,
+  "originalBottomRow": 65,
+  "originalTopRow": 20,
   "parentColumnSpace": 19.015625,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -170,11 +170,11 @@
   ],
   "setAdaptiveYMin": true,
   "showDataPointLabel": false,
-  "topRow": 324.159375,
+  "topRow": 61.15937500000001,
   "type": "CHART_WIDGET",
   "version": 1,
-  "widgetId": "anwkc0z3ao",
-  "widgetName": "ChartTopLMS",
+  "widgetId": "2iulmucwoc",
+  "widgetName": "ChartEnvironment",
   "xAxisName": "",
   "yAxisName": ""
 }

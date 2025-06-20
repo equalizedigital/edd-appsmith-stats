@@ -4,7 +4,7 @@
   "allowScroll": false,
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 485.55937499999993,
+  "bottomRow": 485.559375,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "chartData": {
     "n3fuot1hwl": {
@@ -170,7 +170,7 @@
   ],
   "setAdaptiveYMin": true,
   "showDataPointLabel": false,
-  "topRow": 434.55937499999993,
+  "topRow": 434.559375,
   "type": "CHART_WIDGET",
   "version": 1,
   "widgetId": "776s5psmn4",

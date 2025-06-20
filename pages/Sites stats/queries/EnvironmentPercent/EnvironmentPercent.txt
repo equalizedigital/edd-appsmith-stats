@@ -1,0 +1,10 @@
+SELECT environment,
+       COUNT(id) * 100.0 / (
+           SELECT COUNT(id)
+           FROM wp_edd_all_sites
+           WHERE check_date >= DATE_SUB(NOW(), INTERVAL 1 MONTH)
+       ) AS percentage
+FROM wp_edd_all_sites
+WHERE check_date >= DATE_SUB(NOW(), INTERVAL 1 MONTH)
+GROUP BY environment
+ORDER BY percentage DESC;

@@ -27,29 +27,33 @@
             {
               "children": [
                 {
+                  "align": "start",
+                  "id": "6oacf3iyso"
+                },
+                {
+                  "align": "start",
+                  "id": "wumxwrp46j"
+                }
+              ]
+            },
+            {
+              "children": [
+                {
                   "align": "center",
                   "id": "ze5kozwmb4"
                 },
                 {
                   "align": "center",
-                  "id": "6oacf3iyso"
+                  "id": "2iulmucwoc"
                 }
               ]
             },
             {
               "children": [
-                {
-                  "align": "start",
-                  "id": "wumxwrp46j"
-                },
                 {
                   "align": "start",
                   "id": "186b4i2agb"
-                }
-              ]
-            },
-            {
-              "children": [
+                },
                 {
                   "align": "start",
                   "id": "xf137lk5ex"
@@ -139,7 +143,7 @@
           ],
           "leftColumn": 0,
           "minHeight": 4980,
-          "mobileBottomRow": 8141.593749999996,
+          "mobileBottomRow": 8599.593749999996,
           "mobileTopRow": 0,
           "parentColumnSpace": 1,
           "parentRowSpace": 1,
