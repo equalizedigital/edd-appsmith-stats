@@ -1,16 +1,16 @@
 {
-  "gitSyncId": "63e8d02d1e242279f5911ffe_63ebd7213d6355314505f001",
-  "id": "Sites stats_LicenseStatusesPercent",
+  "gitSyncId": "66903abbe81b6d27879cc440_860e8818-4355-46ff-9b22-5a9dbf5f6de0",
+  "id": "Sites stats_ActiveSites12MosCopy",
   "pluginId": "mysql-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT status,\nCOUNT(site_id) * 100.0 / (SELECT COUNT(site_id) FROM wp_wpf_all_sites WHERE check_date >= DATE_SUB(NOW(), INTERVAL 1 MONTH) AND crm NOT IN ('', '0')) as percentage\nFROM wp_wpf_all_sites\nWHERE check_date >= DATE_SUB(NOW(), INTERVAL 1 MONTH)\nAND crm NOT IN ('', '0')\nGROUP BY status\nORDER BY percentage DESC;",
+      "body": "SELECT COUNT(id) as count\nFROM wp_edd_all_sites\nWHERE check_date >= DATE_SUB(NOW(), INTERVAL 1 YEAR)",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
         {
-          "value": true
+          "value": false
         }
       ],
       "timeoutInMillisecond": 10000
@@ -23,9 +23,9 @@
       "pluginId": "mysql-plugin"
     },
     "dynamicBindingPathList": [],
-    "name": "LicenseStatusesPercent",
+    "name": "ActiveSites12MosCopy",
     "pageId": "Sites stats",
-    "runBehaviour": "MANUAL",
+    "runBehaviour": "ON_PAGE_LOAD",
     "userSetOnLoad": false
   }
 }

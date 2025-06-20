@@ -4,7 +4,7 @@
   "allowScroll": false,
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 59.959375,
+  "bottomRow": 57.4,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "chartData": {
     "n3fuot1hwl": {
@@ -117,7 +117,7 @@
       }
     ]
   },
-  "customFusionChartConfig": "{\n  \"type\": \"pie2d\",\n  \"dataSource\": {\n    \"data\": {{LicenseStatusesPercent.data.map((row) => {\n      return { label: row.status, value: row.percentage, 'color': Color.getRandomColor( '#E55B10' ) };\n  \t\t});\n\t\t}},\n    \"chart\": {\n      \"caption\": \"License Statuses Last 30 Days\",\n\t\t\t\"labelFontSize\": \"14px\",\n\t\t\t\"showLegend\": \"0\",\n\t\t\t\"startingAngle\": 15,\n\t\t\t\"yAxisMinValue\": \"0.2\",\n\t\t\t\"showValues\": 0,\n\t\t\t\"theme\": \"fusion\",\n\t\t\t\"paletteColors\": \"#17a2b8\",\n\t\t\t\"baseFont\": \"Roboto, sans-serif\",\n\t\t\t\"baseFontSize\": \"14\",\n\t\t\t\"baseFontColor\": \"#4d4d4d\",\n\t\t\t\"captionFont\": \"Roboto, sans-serif\",\n\t\t\t\"captionFontSize\": \"24\",\n\t\t\t\"subCaptionFont\": \"Roboto, sans-serif\",\n\t\t\t\"subCaptionFontSize\": \"18\",\n\t\t\t\"subCaptionFontColor\": \"#868e96\"\n\t\t}\n  }\n}",
+  "customFusionChartConfig": "{\n  \"type\": \"pie2d\",\n  \"dataSource\": {\n    \"data\": {{LicenseStatusesPercentCopy.data.map((row) => {\n      return { label: row.status, value: row.percentage, 'color': Color.getRandomColor( '#E55B10' ) };\n  \t\t});\n\t\t}},\n    \"chart\": {\n      \"caption\": \"License Statuses Last 30 Days\",\n\t\t\t\"labelFontSize\": \"14px\",\n\t\t\t\"showLegend\": \"0\",\n\t\t\t\"startingAngle\": 15,\n\t\t\t\"yAxisMinValue\": \"0.2\",\n\t\t\t\"showValues\": 0,\n\t\t\t\"theme\": \"fusion\",\n\t\t\t\"paletteColors\": \"#17a2b8\",\n\t\t\t\"baseFont\": \"Roboto, sans-serif\",\n\t\t\t\"baseFontSize\": \"14\",\n\t\t\t\"baseFontColor\": \"#4d4d4d\",\n\t\t\t\"captionFont\": \"Roboto, sans-serif\",\n\t\t\t\"captionFontSize\": \"24\",\n\t\t\t\"subCaptionFont\": \"Roboto, sans-serif\",\n\t\t\t\"subCaptionFontSize\": \"18\",\n\t\t\t\"subCaptionFontColor\": \"#868e96\"\n\t\t}\n  }\n}",
   "displayName": "Chart",
   "dynamicBindingPathList": [
     {
@@ -151,10 +151,10 @@
   "labelOrientation": "auto",
   "leftColumn": 0,
   "minWidth": 450,
-  "mobileBottomRow": 162,
+  "mobileBottomRow": 61.47968750000002,
   "mobileLeftColumn": 0,
   "mobileRightColumn": 64,
-  "mobileTopRow": 117,
+  "mobileTopRow": 16.479687500000004,
   "originalBottomRow": 65,
   "originalTopRow": 20,
   "parentColumnSpace": 19.015625,
@@ -170,7 +170,7 @@
   ],
   "setAdaptiveYMin": true,
   "showDataPointLabel": false,
-  "topRow": 14.959375000000001,
+  "topRow": 12.399999999999999,
   "type": "CHART_WIDGET",
   "version": 1,
   "widgetId": "ze5kozwmb4",

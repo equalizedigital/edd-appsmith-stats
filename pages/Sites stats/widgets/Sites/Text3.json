@@ -2,7 +2,7 @@
   "alignment": "start",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 11.759375,
+  "bottomRow": 9.2,
   "displayName": "Text",
   "dynamicBindingPathList": [
     {
@@ -35,10 +35,10 @@
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 67,
+  "mobileBottomRow": 7.2796875000000005,
   "mobileLeftColumn": 0,
   "mobileRightColumn": 64,
-  "mobileTopRow": 32,
+  "mobileTopRow": 3.2796874999999996,
   "originalBottomRow": 8,
   "originalTopRow": 4,
   "overflow": "NONE",
@@ -52,7 +52,7 @@
     "label"
   ],
   "shouldTruncate": false,
-  "text": "{{ActiveSites12Mos.data[0].count.toLocaleString('en-US')}}",
+  "text": "{{ActiveSites12MosCopy.data[0].count.toLocaleString('en-US')}}",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 5.2,
