@@ -41,6 +41,10 @@
                 {
                   "align": "start",
                   "id": "wumxwrp46j"
+                },
+                {
+                  "align": "start",
+                  "id": "186b4i2agb"
                 }
               ]
             },
@@ -127,7 +131,7 @@
           ],
           "leftColumn": 0,
           "minHeight": 4980,
-          "mobileBottomRow": 7225.593749999998,
+          "mobileBottomRow": 7683.593749999998,
           "mobileTopRow": 0,
           "parentColumnSpace": 1,
           "parentRowSpace": 1,

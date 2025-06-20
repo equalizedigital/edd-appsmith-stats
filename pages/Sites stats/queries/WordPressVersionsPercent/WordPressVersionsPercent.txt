@@ -1,0 +1,19 @@
+SELECT IF(version_rank <= 20, wp_version, 'Other') AS version_group,
+       ROUND(SUM(site_count) * 100.0 / total_count, 2) AS percentage
+FROM (
+  SELECT wp_version,
+         COUNT(id) AS site_count,
+         ROW_NUMBER() OVER (ORDER BY COUNT(id) DESC) AS version_rank
+  FROM wp_edd_all_sites
+  WHERE check_date >= DATE_SUB(NOW(), INTERVAL 1 MONTH)
+    AND wp_version != ''
+  GROUP BY wp_version
+) AS grouped_versions
+CROSS JOIN (
+  SELECT COUNT(id) AS total_count
+  FROM wp_edd_all_sites
+  WHERE check_date >= DATE_SUB(NOW(), INTERVAL 1 MONTH)
+    AND wp_version != ''
+) AS total
+GROUP BY version_group
+ORDER BY percentage DESC;
