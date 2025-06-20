@@ -25,7 +25,7 @@
     "dynamicBindingPathList": [],
     "name": "TopPluginsMembership",
     "pageId": "Sites stats",
-    "runBehaviour": "ON_PAGE_LOAD",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

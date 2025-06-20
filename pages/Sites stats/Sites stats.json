@@ -6,7 +6,7 @@
       {
         "dsl": {
           "backgroundColor": "none",
-          "bottomRow": 7153.59375,
+          "bottomRow": 1955.5937500000005,
           "canExtend": true,
           "containerStyle": "none",
           "detachFromLayout": true,
@@ -64,79 +64,7 @@
               "children": [
                 {
                   "align": "center",
-                  "id": "y4lzrsoptt"
-                }
-              ]
-            },
-            {
-              "children": [
-                {
-                  "align": "center",
                   "id": "sdzhg614ae"
-                }
-              ]
-            },
-            {
-              "children": [
-                {
-                  "align": "center",
-                  "id": "29x7e5obv5"
-                }
-              ]
-            },
-            {
-              "children": [
-                {
-                  "align": "center",
-                  "id": "anwkc0z3ao"
-                }
-              ]
-            },
-            {
-              "children": [
-                {
-                  "align": "center",
-                  "id": "h1ntjavod1"
-                }
-              ]
-            },
-            {
-              "children": [
-                {
-                  "align": "center",
-                  "id": "776s5psmn4"
-                }
-              ]
-            },
-            {
-              "children": [
-                {
-                  "align": "center",
-                  "id": "4xxo94wx6q"
-                }
-              ]
-            },
-            {
-              "children": [
-                {
-                  "align": "center",
-                  "id": "qwln6iq5wj"
-                }
-              ]
-            },
-            {
-              "children": [
-                {
-                  "align": "center",
-                  "id": "ronyms1h1p"
-                }
-              ]
-            },
-            {
-              "children": [
-                {
-                  "align": "center",
-                  "id": "le36t81i31"
                 }
               ]
             }
