@@ -6,7 +6,7 @@
       {
         "dsl": {
           "backgroundColor": "none",
-          "bottomRow": 1955.5937500000005,
+          "bottomRow": 2367.5937500000005,
           "canExtend": true,
           "containerStyle": "none",
           "detachFromLayout": true,
@@ -67,11 +67,19 @@
                   "id": "sdzhg614ae"
                 }
               ]
+            },
+            {
+              "children": [
+                {
+                  "align": "start",
+                  "id": "ksxbkdvem2"
+                }
+              ]
             }
           ],
           "leftColumn": 0,
           "minHeight": 4980,
-          "mobileBottomRow": 8599.593749999996,
+          "mobileBottomRow": 4980,
           "mobileTopRow": 0,
           "parentColumnSpace": 1,
           "parentRowSpace": 1,
