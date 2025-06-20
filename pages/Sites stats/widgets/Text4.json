@@ -50,7 +50,7 @@
     "label"
   ],
   "shouldTruncate": false,
-  "text": "Sites are tracked in the wp_wpf_all_sites table as they call home to check for updates",
+  "text": "Sites are tracked in the wp_edd_all_sites table as they call home to check for updates",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 0,
