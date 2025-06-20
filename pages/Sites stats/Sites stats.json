@@ -6,7 +6,7 @@
       {
         "dsl": {
           "backgroundColor": "none",
-          "bottomRow": 6229.593749999999,
+          "bottomRow": 6691.59375,
           "canExtend": true,
           "containerStyle": "none",
           "detachFromLayout": true,
@@ -33,6 +33,14 @@
                 {
                   "align": "center",
                   "id": "6oacf3iyso"
+                }
+              ]
+            },
+            {
+              "children": [
+                {
+                  "align": "start",
+                  "id": "wumxwrp46j"
                 }
               ]
             },
@@ -119,7 +127,7 @@
           ],
           "leftColumn": 0,
           "minHeight": 4980,
-          "mobileBottomRow": 6767.593749999998,
+          "mobileBottomRow": 7225.593749999998,
           "mobileTopRow": 0,
           "parentColumnSpace": 1,
           "parentRowSpace": 1,
