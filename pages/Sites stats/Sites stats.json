@@ -6,7 +6,7 @@
       {
         "dsl": {
           "backgroundColor": "none",
-          "bottomRow": 2367.5937500000005,
+          "bottomRow": 3349.59375,
           "canExtend": true,
           "containerStyle": "none",
           "detachFromLayout": true,
@@ -63,8 +63,8 @@
             {
               "children": [
                 {
-                  "align": "center",
-                  "id": "sdzhg614ae"
+                  "align": "start",
+                  "id": "h9jblnk4mu"
                 }
               ]
             },
@@ -73,6 +73,14 @@
                 {
                   "align": "start",
                   "id": "ksxbkdvem2"
+                }
+              ]
+            },
+            {
+              "children": [
+                {
+                  "align": "center",
+                  "id": "sdzhg614ae"
                 }
               ]
             }
