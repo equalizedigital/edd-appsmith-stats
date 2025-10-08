@@ -18,11 +18,15 @@ FROM (
     UNION SELECT 10 UNION SELECT 11 UNION SELECT 12 UNION SELECT 13 UNION SELECT 14
     UNION SELECT 15 UNION SELECT 16 UNION SELECT 17 UNION SELECT 18 UNION SELECT 19
     UNION SELECT 20 UNION SELECT 21 UNION SELECT 22 UNION SELECT 23
-  ) numbers -- This ensures we get a month in the output even if there are 0 results --
+  ) numbers
 ) m
-LEFT JOIN wp_edd_subscriptions s ON DATE_FORMAT(s.expiration, '%Y-%m') = m.month
+LEFT JOIN wp_edd_subscriptions s
+  ON DATE_FORMAT(s.expiration, '%Y-%m') = m.month
   AND s.expiration > DATE_SUB(DATE_ADD(LAST_DAY(NOW()), INTERVAL 1 DAY), INTERVAL 2 YEAR)
-  AND status IN ( 'cancelled', 'failing' )
-  AND notes LIKE '%active to failing by gateway%'
   AND s.expiration < NOW()
+  AND s.status IN ('cancelled', 'failing')
+INNER JOIN wp_edd_notes n
+  ON n.object_id = s.id
+  AND n.object_type = 'subscription'
+  AND n.content LIKE '%active to failing by gateway%'
 GROUP BY m.month;

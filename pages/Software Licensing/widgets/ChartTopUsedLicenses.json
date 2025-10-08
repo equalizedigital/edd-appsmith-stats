@@ -4,7 +4,7 @@
   "allowScroll": false,
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 66.6,
+  "bottomRow": 66.59999999999992,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "chartData": {
     "k19yowdo03": {
@@ -166,10 +166,10 @@
   "labelOrientation": "auto",
   "leftColumn": 0,
   "minWidth": 450,
-  "mobileBottomRow": 66.19999999999999,
+  "mobileBottomRow": 69.79999999999998,
   "mobileLeftColumn": 0,
   "mobileRightColumn": 64,
-  "mobileTopRow": 5.2,
+  "mobileTopRow": 8.8,
   "onDataPointClick": "{{GetSitesByLicenseID.run(() => showModal('ModalLicenseSites'), () => {})}}",
   "originalBottomRow": 76,
   "originalTopRow": 15,
