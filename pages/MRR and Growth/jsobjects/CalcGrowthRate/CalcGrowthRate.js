@@ -1,11 +1,20 @@
 export default {
 	
 	netNewMRR: () => {
-		
-		const i = NewMRRbyMo.data.length - 1;
-		const newSubs = NewMRRbyMo.data[i].mrr;
-		const voluntaryChurn = VoluntaryChurnbyMo.data[i].mrr;
-		const delinquentChurn = DelinquentChurnbyMo.data[i].mrr;
+		// normalize inputs
+		const newData = (typeof NewMRRbyMo !== 'undefined' && Array.isArray(NewMRRbyMo.data)) ? NewMRRbyMo.data : [];
+		const voluntaryData = (typeof VoluntaryChurnbyMo !== 'undefined' && Array.isArray(VoluntaryChurnbyMo.data)) ? VoluntaryChurnbyMo.data : [];
+		const delinquentData = (typeof DelinquentChurnbyMo !== 'undefined' && Array.isArray(DelinquentChurnbyMo.data)) ? DelinquentChurnbyMo.data : [];
+
+		if (newData.length === 0) {
+			// Nothing to compute
+			return { 'val': Numbers.formatCurrency(0), 'color': '#e65a5b' };
+		}
+
+		const i = newData.length - 1;
+		const newSubs = Number(newData[i]?.mrr ?? 0);
+		const voluntaryChurn = Number(voluntaryData[i]?.mrr ?? 0);
+		const delinquentChurn = Number(delinquentData[i]?.mrr ?? 0);
 		const netNew = newSubs - voluntaryChurn - delinquentChurn;
 		
 		var color = '#e65a5b';
@@ -23,11 +32,19 @@ export default {
 		
 		const netRevenueChanges = [];
 
-		for (let i = 0; i < NewMRRbyMo.data.length; i++) {
-			const existingSubs = ExistingMRRbyMo.data[i].mrr;
-			const newSubs = NewMRRbyMo.data[i].mrr;
-			const voluntaryChurn = VoluntaryChurnbyMo.data[i].mrr;
-			const delinquentChurn = DelinquentChurnbyMo.data[i].mrr;
+		// normalize input data arrays (handles undefined sources or missing .data)
+		const newData = (typeof NewMRRbyMo !== 'undefined' && Array.isArray(NewMRRbyMo.data)) ? NewMRRbyMo.data : [];
+		const existingData = (typeof ExistingMRRbyMo !== 'undefined' && Array.isArray(ExistingMRRbyMo.data)) ? ExistingMRRbyMo.data : [];
+		const voluntaryData = (typeof VoluntaryChurnbyMo !== 'undefined' && Array.isArray(VoluntaryChurnbyMo.data)) ? VoluntaryChurnbyMo.data : [];
+		const delinquentData = (typeof DelinquentChurnbyMo !== 'undefined' && Array.isArray(DelinquentChurnbyMo.data)) ? DelinquentChurnbyMo.data : [];
+
+		const length = Math.max(newData.length, existingData.length, voluntaryData.length, delinquentData.length);
+
+		for (let i = 0; i < length; i++) {
+			const existingSubs = Number(existingData[i]?.mrr ?? 0);
+			const newSubs = Number(newData[i]?.mrr ?? 0);
+			const voluntaryChurn = Number(voluntaryData[i]?.mrr ?? 0);
+			const delinquentChurn = Number(delinquentData[i]?.mrr ?? 0);
 			const netChange = existingSubs + newSubs - voluntaryChurn - delinquentChurn;
 			netRevenueChanges.push( netChange );
 		}
@@ -39,13 +56,22 @@ export default {
 		
 		const netRevenueChanges = [];
 
-		for (let i = 0; i < NewMRRbyMo.data.length; i++) {
-			const existingSubs = ExistingMRRbyMo.data[i].mrr;
-			const newSubs = NewMRRbyMo.data[i].mrr;
-			const voluntaryChurn = VoluntaryChurnbyMo.data[i].mrr;
-			const delinquentChurn = DelinquentChurnbyMo.data[i].mrr;
+		// normalize input data arrays
+		const newData = (typeof NewMRRbyMo !== 'undefined' && Array.isArray(NewMRRbyMo.data)) ? NewMRRbyMo.data : [];
+		const existingData = (typeof ExistingMRRbyMo !== 'undefined' && Array.isArray(ExistingMRRbyMo.data)) ? ExistingMRRbyMo.data : [];
+		const voluntaryData = (typeof VoluntaryChurnbyMo !== 'undefined' && Array.isArray(VoluntaryChurnbyMo.data)) ? VoluntaryChurnbyMo.data : [];
+		const delinquentData = (typeof DelinquentChurnbyMo !== 'undefined' && Array.isArray(DelinquentChurnbyMo.data)) ? DelinquentChurnbyMo.data : [];
+
+		const length = Math.max(newData.length, existingData.length, voluntaryData.length, delinquentData.length);
+
+		for (let i = 0; i < length; i++) {
+			const existingSubs = Number(existingData[i]?.mrr ?? 0);
+			const newSubs = Number(newData[i]?.mrr ?? 0);
+			const voluntaryChurn = Number(voluntaryData[i]?.mrr ?? 0);
+			const delinquentChurn = Number(delinquentData[i]?.mrr ?? 0);
 			const netChange = newSubs - voluntaryChurn - delinquentChurn;
-			const percentChange = ( netChange / ( existingSubs + newSubs ) ) * 100;
+			const denom = (existingSubs + newSubs);
+			const percentChange = denom === 0 ? 0 : ( netChange / denom ) * 100;
 			netRevenueChanges.push( percentChange );
 		}
 		
@@ -56,11 +82,19 @@ export default {
 		
 		const netSubscriberChanges = [];
 
-		for (let i = 0; i < NewMRRbyMo.data.length; i++) {
-			const existingSubs = ExistingMRRbyMo.data[i].subscriptions;
-			const newSubs = NewMRRbyMo.data[i].subscriptions;
-			const voluntaryChurn = VoluntaryChurnbyMo.data[i].subscriptions;
-			const delinquentChurn = DelinquentChurnbyMo.data[i].subscriptions;
+		// normalize input data arrays
+		const newData = (typeof NewMRRbyMo !== 'undefined' && Array.isArray(NewMRRbyMo.data)) ? NewMRRbyMo.data : [];
+		const existingData = (typeof ExistingMRRbyMo !== 'undefined' && Array.isArray(ExistingMRRbyMo.data)) ? ExistingMRRbyMo.data : [];
+		const voluntaryData = (typeof VoluntaryChurnbyMo !== 'undefined' && Array.isArray(VoluntaryChurnbyMo.data)) ? VoluntaryChurnbyMo.data : [];
+		const delinquentData = (typeof DelinquentChurnbyMo !== 'undefined' && Array.isArray(DelinquentChurnbyMo.data)) ? DelinquentChurnbyMo.data : [];
+
+		const length = Math.max(newData.length, existingData.length, voluntaryData.length, delinquentData.length);
+
+		for (let i = 0; i < length; i++) {
+			const existingSubs = Number(existingData[i]?.subscriptions ?? 0);
+			const newSubs = Number(newData[i]?.subscriptions ?? 0);
+			const voluntaryChurn = Number(voluntaryData[i]?.subscriptions ?? 0);
+			const delinquentChurn = Number(delinquentData[i]?.subscriptions ?? 0);
 			const netChange = existingSubs + newSubs - voluntaryChurn - delinquentChurn;
 			netSubscriberChanges.push( netChange );
 		}
