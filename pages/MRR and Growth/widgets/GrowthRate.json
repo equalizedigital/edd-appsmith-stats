@@ -1,6 +1,6 @@
 {
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-  "alignment": "center",
+  "alignment": "start",
   "allowScroll": false,
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
@@ -134,7 +134,7 @@
       }
     ]
   },
-  "customFusionChartConfig": "{\n  \"type\": \"stackedcolumn2dlinedy\",\n  \"dataSource\": {\n    \"dataset\": [\n\t\t\t{\n\t\t\t\t\"seriesname\": \"New\",\n\t\t\t\t\"color\": \"#16b8a0\",\n\t\t\t\t\"data\": {{ NewMRRbyMo.data.map((row) => { return { value: row.mrr, color: Color.getRandomColor( '#16b8a0' ) } }); }}\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"seriesname\": \"Voluntary Churn\",\n\t\t\t\t\"color\": \"#e65a5b\",\n\t\t\t\t\"data\": {{ VoluntaryChurnbyMo.data.map((row) => { return { value: -row.mrr, color: Color.getRandomColor( '#e65a5b' ) } }); }}\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"seriesname\": \"Delinquent Churn\",\n\t\t\t\t\"color\": \"#fc9479\",\n\t\t\t\t\"data\": {{ DelinquentChurnbyMo.data.map((row) => { return { value: -row.mrr, color: Color.getRandomColor( '#fc9479' ) } }); }}\n\t\t\t},\n\t\t\t{\n      \t\"seriesname\": \"Growth\",\n      \t\"plottooltext\": \"Growth Rate: <b>$dataValue</b>\",\n      \t\"renderAs\": \"line\",\n\t\t\t\t\"color\": \"#1B2E43\",\n\t\t\t\t\"parentyaxis\": \"S\",\n      \t\"data\": {{ CalcGrowthRate.growthRate().map( value => ({ value }))}}\n\t\t\t}\n\t\t],\n\t\t\"categories\": [\n\t\t\t{\n\t\t\t\t\"category\": {{ ExistingMRRbyMo.data.map((row) => { return { label: row.month } }); }}\n\t\t\t}\n\t\t],\n    \"chart\": {\n        \"caption\": \"Growth Rate\",\n        \"xAxisName\": \"Year\",\n        \"yAxisName\": \"Revenue\",\n\t\t\t\t\"numberPrefix\": \"$\",\n        \"theme\": \"fusion\",\n        \"paletteColors\": \"#17a2b8\",\n        \"baseFont\": \"Roboto, sans-serif\",\n        \"baseFontSize\": \"14\",\n        \"baseFontColor\": \"#4d4d4d\",\n        \"captionFont\": \"Roboto, sans-serif\",\n        \"captionFontSize\": \"24\",\n        \"subCaptionFont\": \"Roboto, sans-serif\",\n        \"subCaptionFontSize\": \"18\",\n        \"subCaptionFontColor\": \"#868e96\",\n        \"anchorBgColor\": \"#1B2E43\",\n        \"anchorBgHoverColor\": \"#1B2E43\",\n        \"anchorHoverRadius\": \"7\",\n\t\t\t\t\"snumbersuffix\": \"%\",\n\t\t\t\t\"sYAxisMaxValue\": \"10\",\n\t\t\t\t\"sYAxisMinValue\": \"-10\",\n\t\t\t\t\"labelFontColor\": \"#888\"\n    }\n  }\n}",
+  "customFusionChartConfig": "{\n  \"type\": \"stackedcolumn2dlinedy\",\n  \"dataSource\": {\n    \"dataset\": [\n\t\t\t{\n\t\t\t\t\"seriesname\": \"New\",\n\t\t\t\t\"color\": \"#16b8a0\",\n\t\t\t\t\"data\": {{ NewMRRbyMo.data.map((row) => { return { value: row.mrr, color: Color.getRandomColor( '#16b8a0' ) } }); }}\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"seriesname\": \"Voluntary Churn\",\n\t\t\t\t\"color\": \"#e65a5b\",\n\t\t\t\t\"data\": {{ VoluntaryChurnbyMo.data.map((row) => { return { value: -row.mrr, color: Color.getRandomColor( '#e65a5b' ) } }); }}\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"seriesname\": \"Delinquent Churn\",\n\t\t\t\t\"color\": \"#fc9479\",\n\t\t\t\t\"data\": {{ DelinquentChurnbyMo.data.map((row) => { return { value: -row.mrr, color: Color.getRandomColor( '#fc9479' ) } }); }}\n\t\t\t},\n\t\t\t{\n      \t\"seriesname\": \"Growth\",\n      \t\"plottooltext\": \"Growth Rate: <b>$dataValue</b>\",\n      \t\"renderAs\": \"line\",\n\t\t\t\t\"color\": \"#1B2E43\",\n\t\t\t\t\"parentyaxis\": \"S\",\n      \t\"data\": {{ CalcGrowthRate.growthRate().map( value => ({ value }))}}\n\t\t\t}\n\t\t],\n\t\t\"categories\": [\n\t\t\t{\n\t\t\t\t\"category\": {{ ExistingMRRbyMo.data.map((row) => { return { label: row.month } }); }}\n\t\t\t}\n\t\t],\n    \"chart\": {\n        \"caption\": \"Growth Rate\",\n        \"xAxisName\": \"Year\",\n        \"yAxisName\": \"Revenue\",\n\t\t\t\t\"numberPrefix\": \"$\",\n        \"theme\": \"fusion\",\n        \"paletteColors\": \"#17a2b8\",\n        \"baseFont\": \"Roboto, sans-serif\",\n        \"baseFontSize\": \"14\",\n        \"baseFontColor\": \"#4d4d4d\",\n        \"captionFont\": \"Roboto, sans-serif\",\n        \"captionFontSize\": \"24\",\n        \"subCaptionFont\": \"Roboto, sans-serif\",\n        \"subCaptionFontSize\": \"18\",\n        \"subCaptionFontColor\": \"#868e96\",\n        \"anchorBgColor\": \"#1B2E43\",\n        \"anchorBgHoverColor\": \"#1B2E43\",\n        \"anchorHoverRadius\": \"7\",\n\t\t\t\t\"snumbersuffix\": \"%\",\n\t\t\t\t\"sYAxisMaxValue\": \"15\",\n\t\t\t\t\"sYAxisMinValue\": \"-15\",\n\t\t\t\t\"labelFontColor\": \"#888\"\n    }\n  }\n}",
   "displayName": "Chart",
   "dynamicBindingPathList": [
     {
@@ -182,6 +182,7 @@
     "visuals",
     "visualisations"
   ],
+  "setAdaptiveYMin": false,
   "showDataPointLabel": false,
   "topRow": 175.2,
   "type": "CHART_WIDGET",

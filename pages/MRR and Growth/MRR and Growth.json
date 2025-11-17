@@ -6,7 +6,7 @@
       {
         "dsl": {
           "backgroundColor": "none",
-          "bottomRow": 2532,
+          "bottomRow": 2452,
           "canExtend": true,
           "containerStyle": "none",
           "detachFromLayout": true,
@@ -51,7 +51,7 @@
             {
               "children": [
                 {
-                  "align": "center",
+                  "align": "start",
                   "id": "xici7f57w1"
                 }
               ]
