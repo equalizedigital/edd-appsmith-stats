@@ -1,11 +1,11 @@
 SELECT
   m.month,
-  COUNT(DISTINCT CASE WHEN n.id IS NOT NULL THEN s.id END) AS subscriptions,
+  COUNT(DISTINCT CASE WHEN IFNULL(n.id, 0) > 0 THEN s.id END) AS subscriptions,
   COALESCE(
     ROUND(
       SUM(
         CASE
-          WHEN n.id IS NOT NULL THEN
+          WHEN IFNULL(n.id, 0) > 0 THEN
             CASE
               WHEN s.created >= DATE_SUB(s.created, INTERVAL 12 MONTH) THEN s.initial_amount / 12
               ELSE s.recurring_amount / 12
