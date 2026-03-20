@@ -1,0 +1,538 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "alignment": "center",
+  "animateLoading": true,
+  "borderColor": "#E5E7EB",
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderWidth": "1",
+  "bottomRow": 304,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "canFreezeColumn": false,
+  "childStylesheet": {
+    "button": {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
+    },
+    "editActions": {
+      "discardBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "discardButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "saveBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "saveButtonColor": "{{appsmith.theme.colors.primaryColor}}"
+    },
+    "iconButton": {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
+    },
+    "menuButton": {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "menuColor": "{{appsmith.theme.colors.primaryColor}}"
+    }
+  },
+  "columnOrder": [
+    "cohort",
+    "licenses",
+    "year_1",
+    "year_2",
+    "year_3",
+    "year_4",
+    "year_5",
+    "year_6",
+    "year_7",
+    "year_8",
+    "year_9"
+  ],
+  "columnUpdatedAt": 1710892800000,
+  "columnWidthMap": {
+    "cohort": 90,
+    "licenses": 120,
+    "year_1": 96,
+    "year_2": 96,
+    "year_3": 96,
+    "year_4": 96,
+    "year_5": 96,
+    "year_6": 96,
+    "year_7": 96,
+    "year_8": 96,
+    "year_9": 96
+  },
+  "defaultPageSize": 0,
+  "defaultSelectedRowIndex": 0,
+  "defaultSelectedRowIndices": [
+    0
+  ],
+  "delimiter": ",",
+  "displayName": "Table",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "primaryColumns.cohort.computedValue"
+    },
+    {
+      "key": "primaryColumns.licenses.computedValue"
+    },
+    {
+      "key": "primaryColumns.year_1.computedValue"
+    },
+    {
+      "key": "primaryColumns.year_1.cellBackground"
+    },
+    {
+      "key": "primaryColumns.year_1.textColor"
+    },
+    {
+      "key": "primaryColumns.year_2.computedValue"
+    },
+    {
+      "key": "primaryColumns.year_2.cellBackground"
+    },
+    {
+      "key": "primaryColumns.year_2.textColor"
+    },
+    {
+      "key": "primaryColumns.year_3.computedValue"
+    },
+    {
+      "key": "primaryColumns.year_3.cellBackground"
+    },
+    {
+      "key": "primaryColumns.year_3.textColor"
+    },
+    {
+      "key": "primaryColumns.year_4.computedValue"
+    },
+    {
+      "key": "primaryColumns.year_4.cellBackground"
+    },
+    {
+      "key": "primaryColumns.year_4.textColor"
+    },
+    {
+      "key": "primaryColumns.year_5.computedValue"
+    },
+    {
+      "key": "primaryColumns.year_5.cellBackground"
+    },
+    {
+      "key": "primaryColumns.year_5.textColor"
+    },
+    {
+      "key": "primaryColumns.year_6.computedValue"
+    },
+    {
+      "key": "primaryColumns.year_6.cellBackground"
+    },
+    {
+      "key": "primaryColumns.year_6.textColor"
+    },
+    {
+      "key": "primaryColumns.year_7.computedValue"
+    },
+    {
+      "key": "primaryColumns.year_7.cellBackground"
+    },
+    {
+      "key": "primaryColumns.year_7.textColor"
+    },
+    {
+      "key": "primaryColumns.year_8.computedValue"
+    },
+    {
+      "key": "primaryColumns.year_8.cellBackground"
+    },
+    {
+      "key": "primaryColumns.year_8.textColor"
+    },
+    {
+      "key": "primaryColumns.year_9.computedValue"
+    },
+    {
+      "key": "primaryColumns.year_9.cellBackground"
+    },
+    {
+      "key": "primaryColumns.year_9.textColor"
+    },
+    {
+      "key": "tableData"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "tableData"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "enableClientSideSearch": false,
+  "enableServerSideFiltering": false,
+  "flexVerticalAlignment": "end",
+  "hideCard": false,
+  "horizontalAlignment": "LEFT",
+  "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
+  "inlineEditingSaveOption": "ROW_LEVEL",
+  "isDeprecated": false,
+  "isLoading": false,
+  "isSortable": true,
+  "isVisible": true,
+  "isVisibleDownload": false,
+  "isVisibleFilters": false,
+  "isVisiblePagination": false,
+  "isVisibleSearch": false,
+  "key": "q1w7kt7h8v",
+  "label": "Data",
+  "leftColumn": 0,
+  "minWidth": 450,
+  "mobileBottomRow": 304,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 64,
+  "mobileTopRow": 232,
+  "originalBottomRow": 312,
+  "originalTopRow": 240,
+  "parentColumnSpace": 20.484375,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "primaryColumns": {
+    "cohort": {
+      "alias": "cohort",
+      "allowCellWrapping": false,
+      "cellBackground": "",
+      "columnType": "number",
+      "computedValue": "{{(() => { const tableData = TableRenewalCohortRates.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow[\"cohort\"] )) : currentRow[\"cohort\"] })()}}",
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "cohort",
+      "index": 0,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Cohort",
+      "originalId": "cohort",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 90
+    },
+    "licenses": {
+      "alias": "licenses",
+      "allowCellWrapping": false,
+      "cellBackground": "",
+      "columnType": "number",
+      "computedValue": "{{(() => { const tableData = TableRenewalCohortRates.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow[\"licenses_label\"] )) : currentRow[\"licenses_label\"] })()}}",
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "licenses",
+      "index": 1,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Licenses",
+      "originalId": "licenses",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 120
+    },
+    "year_1": {
+      "alias": "year_1",
+      "allowCellWrapping": false,
+      "cellBackground": "{{currentRow[\"year_1_color\"]}}",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = TableRenewalCohortRates.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow[\"year_1_label\"] )) : currentRow[\"year_1_label\"] })()}}",
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "CENTER",
+      "id": "year_1",
+      "index": 2,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Year 1",
+      "originalId": "year_1",
+      "sticky": "",
+      "textColor": "{{currentRow[\"year_1_text_color\"]}}",
+      "textSize": "0.875rem",
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 96
+    },
+    "year_2": {
+      "alias": "year_2",
+      "allowCellWrapping": false,
+      "cellBackground": "{{currentRow[\"year_2_color\"]}}",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = TableRenewalCohortRates.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow[\"year_2_label\"] )) : currentRow[\"year_2_label\"] })()}}",
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "CENTER",
+      "id": "year_2",
+      "index": 3,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Year 2",
+      "originalId": "year_2",
+      "sticky": "",
+      "textColor": "{{currentRow[\"year_2_text_color\"]}}",
+      "textSize": "0.875rem",
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 96
+    },
+    "year_3": {
+      "alias": "year_3",
+      "allowCellWrapping": false,
+      "cellBackground": "{{currentRow[\"year_3_color\"]}}",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = TableRenewalCohortRates.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow[\"year_3_label\"] )) : currentRow[\"year_3_label\"] })()}}",
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "CENTER",
+      "id": "year_3",
+      "index": 4,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Year 3",
+      "originalId": "year_3",
+      "sticky": "",
+      "textColor": "{{currentRow[\"year_3_text_color\"]}}",
+      "textSize": "0.875rem",
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 96
+    },
+    "year_4": {
+      "alias": "year_4",
+      "allowCellWrapping": false,
+      "cellBackground": "{{currentRow[\"year_4_color\"]}}",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = TableRenewalCohortRates.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow[\"year_4_label\"] )) : currentRow[\"year_4_label\"] })()}}",
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "CENTER",
+      "id": "year_4",
+      "index": 5,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Year 4",
+      "originalId": "year_4",
+      "sticky": "",
+      "textColor": "{{currentRow[\"year_4_text_color\"]}}",
+      "textSize": "0.875rem",
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 96
+    },
+    "year_5": {
+      "alias": "year_5",
+      "allowCellWrapping": false,
+      "cellBackground": "{{currentRow[\"year_5_color\"]}}",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = TableRenewalCohortRates.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow[\"year_5_label\"] )) : currentRow[\"year_5_label\"] })()}}",
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "CENTER",
+      "id": "year_5",
+      "index": 6,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Year 5",
+      "originalId": "year_5",
+      "sticky": "",
+      "textColor": "{{currentRow[\"year_5_text_color\"]}}",
+      "textSize": "0.875rem",
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 96
+    },
+    "year_6": {
+      "alias": "year_6",
+      "allowCellWrapping": false,
+      "cellBackground": "{{currentRow[\"year_6_color\"]}}",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = TableRenewalCohortRates.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow[\"year_6_label\"] )) : currentRow[\"year_6_label\"] })()}}",
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "CENTER",
+      "id": "year_6",
+      "index": 7,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Year 6",
+      "originalId": "year_6",
+      "sticky": "",
+      "textColor": "{{currentRow[\"year_6_text_color\"]}}",
+      "textSize": "0.875rem",
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 96
+    },
+    "year_7": {
+      "alias": "year_7",
+      "allowCellWrapping": false,
+      "cellBackground": "{{currentRow[\"year_7_color\"]}}",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = TableRenewalCohortRates.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow[\"year_7_label\"] )) : currentRow[\"year_7_label\"] })()}}",
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "CENTER",
+      "id": "year_7",
+      "index": 8,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Year 7",
+      "originalId": "year_7",
+      "sticky": "",
+      "textColor": "{{currentRow[\"year_7_text_color\"]}}",
+      "textSize": "0.875rem",
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 96
+    },
+    "year_8": {
+      "alias": "year_8",
+      "allowCellWrapping": false,
+      "cellBackground": "{{currentRow[\"year_8_color\"]}}",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = TableRenewalCohortRates.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow[\"year_8_label\"] )) : currentRow[\"year_8_label\"] })()}}",
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "CENTER",
+      "id": "year_8",
+      "index": 9,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Year 8",
+      "originalId": "year_8",
+      "sticky": "",
+      "textColor": "{{currentRow[\"year_8_text_color\"]}}",
+      "textSize": "0.875rem",
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 96
+    },
+    "year_9": {
+      "alias": "year_9",
+      "allowCellWrapping": false,
+      "cellBackground": "{{currentRow[\"year_9_color\"]}}",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = TableRenewalCohortRates.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow[\"year_9_label\"] )) : currentRow[\"year_9_label\"] })()}}",
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "CENTER",
+      "id": "year_9",
+      "index": 10,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Year 9",
+      "originalId": "year_9",
+      "sticky": "",
+      "textColor": "{{currentRow[\"year_9_text_color\"]}}",
+      "textSize": "0.875rem",
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 96
+    }
+  },
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "searchKey": "",
+  "showInlineEditingOptionDropdown": true,
+  "tableData": "{{RenewalCohortTable.tableData()}}",
+  "textSize": "0.875rem",
+  "topRow": 232,
+  "totalRecordsCount": 0,
+  "type": "TABLE_WIDGET_V2",
+  "version": 1,
+  "verticalAlignment": "CENTER",
+  "widgetId": "dxtwiv2u9j",
+  "widgetName": "TableRenewalCohortRates"
+}

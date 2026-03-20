@@ -1,0 +1,85 @@
+SELECT
+  cohorts.cohort_year,
+  cohorts.original_licenses,
+  year_numbers.renewal_year,
+  CASE
+    WHEN cohorts.cohort_year + year_numbers.renewal_year <= YEAR(CURDATE()) THEN
+      ROUND(100.0 * COUNT(renewal_matches.pair_key) / cohorts.original_licenses, 1)
+    ELSE NULL
+  END AS renewal_rate
+FROM
+  (
+    SELECT
+      YEAR(original_pairs.first_sale_date) AS cohort_year,
+      COUNT(*) AS original_licenses
+    FROM
+      (
+        SELECT
+          CONCAT(o.customer_id, ':', oi.product_id, ':', COALESCE(oi.price_id, 0)) AS pair_key,
+          o.customer_id,
+          oi.product_id,
+          COALESCE(oi.price_id, 0) AS price_id,
+          MIN(o.date_created) AS first_sale_date
+        FROM wp_edd_orders o
+        JOIN wp_edd_order_items oi ON oi.order_id = o.id
+        JOIN wp_edd_customers c ON c.id = o.customer_id
+        WHERE o.parent = 0
+          AND o.type = 'sale'
+          AND o.status = 'complete'
+          AND c.purchase_value > 0
+          AND NOT (c.purchase_count = 1 AND c.purchase_value >= 847)
+        GROUP BY o.customer_id, oi.product_id, COALESCE(oi.price_id, 0)
+      ) AS original_pairs
+    GROUP BY YEAR(original_pairs.first_sale_date)
+  ) AS cohorts
+JOIN
+  (
+    SELECT 1 AS renewal_year
+    UNION ALL SELECT 2
+    UNION ALL SELECT 3
+    UNION ALL SELECT 4
+    UNION ALL SELECT 5
+    UNION ALL SELECT 6
+    UNION ALL SELECT 7
+    UNION ALL SELECT 8
+    UNION ALL SELECT 9
+  ) AS year_numbers
+LEFT JOIN
+  (
+    SELECT DISTINCT
+      original_pairs.pair_key,
+      YEAR(original_pairs.first_sale_date) AS cohort_year,
+      TIMESTAMPDIFF(YEAR, original_pairs.first_sale_date, renewal_orders.date_created) AS renewal_year
+    FROM
+      (
+        SELECT
+          CONCAT(o.customer_id, ':', oi.product_id, ':', COALESCE(oi.price_id, 0)) AS pair_key,
+          o.customer_id,
+          oi.product_id,
+          COALESCE(oi.price_id, 0) AS price_id,
+          MIN(o.date_created) AS first_sale_date
+        FROM wp_edd_orders o
+        JOIN wp_edd_order_items oi ON oi.order_id = o.id
+        JOIN wp_edd_customers c ON c.id = o.customer_id
+        WHERE o.parent = 0
+          AND o.type = 'sale'
+          AND o.status = 'complete'
+          AND c.purchase_value > 0
+          AND NOT (c.purchase_count = 1 AND c.purchase_value >= 847)
+        GROUP BY o.customer_id, oi.product_id, COALESCE(oi.price_id, 0)
+      ) AS original_pairs
+    JOIN wp_edd_orders renewal_orders
+      ON renewal_orders.customer_id = original_pairs.customer_id
+      AND renewal_orders.type = 'sale'
+      AND renewal_orders.status IN ('complete', 'edd_subscription')
+      AND renewal_orders.date_created >= DATE_ADD(original_pairs.first_sale_date, INTERVAL 1 YEAR)
+    JOIN wp_edd_order_items renewal_items
+      ON renewal_items.order_id = renewal_orders.id
+      AND renewal_items.product_id = original_pairs.product_id
+      AND COALESCE(renewal_items.price_id, 0) = original_pairs.price_id
+    WHERE TIMESTAMPDIFF(YEAR, original_pairs.first_sale_date, renewal_orders.date_created) BETWEEN 1 AND 9
+  ) AS renewal_matches
+  ON renewal_matches.cohort_year = cohorts.cohort_year
+  AND renewal_matches.renewal_year = year_numbers.renewal_year
+GROUP BY cohorts.cohort_year, cohorts.original_licenses, year_numbers.renewal_year
+ORDER BY cohorts.cohort_year, year_numbers.renewal_year;
