@@ -6,7 +6,7 @@
       {
         "dsl": {
           "backgroundColor": "none",
-          "bottomRow": 2079.9999999999995,
+          "bottomRow": 3040,
           "canExtend": true,
           "containerStyle": "none",
           "detachFromLayout": true,
@@ -75,10 +75,50 @@
                   "id": "4t8ca8njce"
                 }
               ]
+            },
+            {
+              "children": [
+                {
+                  "align": "start",
+                  "id": "u2mjlwm5nz"
+                }
+              ]
+            },
+            {
+              "children": [
+                {
+                  "align": "start",
+                  "id": "g4tx4ab4r2"
+                }
+              ]
+            },
+            {
+              "children": [
+                {
+                  "align": "start",
+                  "id": "jlwmwfmbk7"
+                }
+              ]
+            },
+            {
+              "children": [
+                {
+                  "align": "start",
+                  "id": "d80r7c4j36"
+                }
+              ]
+            },
+            {
+              "children": [
+                {
+                  "align": "start",
+                  "id": "dxtwiv2u9j"
+                }
+              ]
             }
           ],
           "leftColumn": 0,
-          "minHeight": 1930,
+          "minHeight": 3040,
           "parentColumnSpace": 1,
           "parentRowSpace": 1,
           "positioning": "vertical",
