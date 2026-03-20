@@ -6,7 +6,7 @@
       {
         "dsl": {
           "backgroundColor": "none",
-          "bottomRow": 2452,
+          "bottomRow": 3160,
           "canExtend": true,
           "containerStyle": "none",
           "detachFromLayout": true,
@@ -55,10 +55,18 @@
                   "id": "xici7f57w1"
                 }
               ]
+            },
+            {
+              "children": [
+                {
+                  "align": "center",
+                  "id": "vkp7q2yz8m"
+                }
+              ]
             }
           ],
           "leftColumn": 0,
-          "minHeight": 2380,
+          "minHeight": 3160,
           "mobileBottomRow": 2824.0000000000005,
           "mobileTopRow": 0,
           "parentColumnSpace": 1,
