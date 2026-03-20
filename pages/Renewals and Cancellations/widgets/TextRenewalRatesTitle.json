@@ -2,7 +2,7 @@
   "alignment": "center",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 208.8,
+  "bottomRow": 205.59999999999994,
   "displayName": "Text",
   "dynamicBindingPathList": [
     {
@@ -31,6 +31,10 @@
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
+  "mobileBottomRow": 235.19999999999996,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 64,
+  "mobileTopRow": 230.79999999999995,
   "originalBottomRow": 216,
   "originalTopRow": 212,
   "overflow": "NONE",
@@ -49,7 +53,7 @@
   "text": "Renewal Rates",
   "textAlign": "LEFT",
   "textColor": "#231F20",
-  "topRow": 204.8,
+  "topRow": 201.19999999999993,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

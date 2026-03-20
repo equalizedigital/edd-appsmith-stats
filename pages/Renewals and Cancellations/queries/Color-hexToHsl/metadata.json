@@ -9,7 +9,8 @@
       "isAsync": false,
       "jsArguments": [
         {
-          "name": "hexColor"
+          "name": "hexColor",
+          "value": "#006bb1"
         }
       ],
       "paginationType": "NONE",

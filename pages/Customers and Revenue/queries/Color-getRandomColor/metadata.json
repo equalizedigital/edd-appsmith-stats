@@ -9,7 +9,8 @@
       "isAsync": false,
       "jsArguments": [
         {
-          "name": "inputColor"
+          "name": "inputColor",
+          "value": "#006bb1"
         }
       ],
       "paginationType": "NONE",

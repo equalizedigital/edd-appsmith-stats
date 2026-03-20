@@ -2,7 +2,7 @@
   "alignment": "center",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 216.8,
+  "bottomRow": 211.43749999999991,
   "displayName": "Text",
   "dynamicBindingPathList": [
     {
@@ -30,6 +30,10 @@
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 6,
   "minWidth": 450,
+  "mobileBottomRow": 240.63749999999996,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 64,
+  "mobileTopRow": 235.99999999999997,
   "originalBottomRow": 224,
   "originalTopRow": 217,
   "overflow": "NONE",
@@ -48,7 +52,7 @@
   "text": "What percentage of customers renew their annual license each year. Based on customer-product pairs: each original new sale is tracked through subsequent renewals.",
   "textAlign": "LEFT",
   "textColor": "#4B5563",
-  "topRow": 209.6,
+  "topRow": 206.79999999999993,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

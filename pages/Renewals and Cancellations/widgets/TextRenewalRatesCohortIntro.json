@@ -2,7 +2,7 @@
   "alignment": "center",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 230.4,
+  "bottomRow": 222.47499999999988,
   "displayName": "Text",
   "dynamicBindingPathList": [
     {
@@ -30,6 +30,10 @@
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 6,
   "minWidth": 450,
+  "mobileBottomRow": 250.87499999999997,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 64,
+  "mobileTopRow": 246.23749999999998,
   "originalBottomRow": 238,
   "originalTopRow": 231,
   "overflow": "NONE",
@@ -48,7 +52,7 @@
   "text": "Each row is a purchase cohort. Percentages show what proportion of original licenses renewed for each successive year. Cells marked — indicate not enough time has passed.",
   "textAlign": "LEFT",
   "textColor": "#4B5563",
-  "topRow": 224,
+  "topRow": 217.8374999999999,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

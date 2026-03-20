@@ -9,7 +9,8 @@
       "isAsync": false,
       "jsArguments": [
         {
-          "name": "dateString"
+          "name": "dateString",
+          "value": "2023-01"
         }
       ],
       "paginationType": "NONE",

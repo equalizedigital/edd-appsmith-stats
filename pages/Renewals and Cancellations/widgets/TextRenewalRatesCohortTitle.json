@@ -2,7 +2,7 @@
   "alignment": "center",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 223.2,
+  "bottomRow": 216.6374999999999,
   "displayName": "Text",
   "dynamicBindingPathList": [
     {
@@ -31,6 +31,10 @@
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
+  "mobileBottomRow": 245.43749999999997,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 64,
+  "mobileTopRow": 241.43749999999997,
   "originalBottomRow": 230,
   "originalTopRow": 226,
   "overflow": "NONE",
@@ -49,7 +53,7 @@
   "text": "Overall Renewal Rates by Cohort Year",
   "textAlign": "LEFT",
   "textColor": "#231F20",
-  "topRow": 219.2,
+  "topRow": 212.6374999999999,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

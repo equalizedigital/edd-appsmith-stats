@@ -25,7 +25,7 @@
     "dynamicBindingPathList": [],
     "name": "RenewalCohortRates",
     "pageId": "Renewals and Cancellations",
-    "runBehaviour": "ON_PAGE_LOAD",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }
 }

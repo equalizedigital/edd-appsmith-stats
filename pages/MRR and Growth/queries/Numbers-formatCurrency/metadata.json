@@ -9,7 +9,8 @@
       "isAsync": false,
       "jsArguments": [
         {
-          "name": "num"
+          "name": "num",
+          "value": "{{0}}"
         }
       ],
       "paginationType": "NONE",
